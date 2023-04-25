@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'vazie';
+    font-family: 'vazir';
     src: url('../fonts/vazir.eot'); 
     src: url('../fonts/vazir.ttf')  format('truetype'), 
          url('../fonts/vazir.woff2') format('woff2'), 
@@ -15,10 +15,122 @@
   body{
       font-family: 'vazir';
       direction: rtl;
-      display: flex;
+      position: relative;
       height: 100vh;
+      overflow-x: hidden;
   }
 
   header {
-
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #986eada3;
+    width: 100%;
+    /* height: 150px; */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x:auto
   }
+
+  header h2 {
+    font-size: 25px;
+    padding: 15px;
+  }
+
+  header p {
+    font-size: 13px;
+    line-height: 30px;
+    width: 50%;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content p {
+    font-size: 13px;
+    padding: 15px;
+    line-height: 29px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color:#3f1263;
+    /*padding: 10px;
+    */height: 100vh;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+  .sidebar.toggle-sidebar {
+    left: -180px;
+  }
+
+  .sidebar img {
+    width: 120px;
+    height: 120px;
+    padding: 30px 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar ul {
+    list-style: none;
+    text-align: center;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    width: 100%;
+    color: bisque;
+}
+
+.sidebar ul li {
+    padding: 7px;
+    border-bottom: 1px solid rgba(255, 228, 196, 0.312);
+    border-top: 1px solid rgba(255, 228, 196, 0.312);
+    /* display: block; */
+}
+
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgba(249, 249, 249, 0.899);
+    font-size: 12px;
+    
+}
+
+.btn svg {
+    font-size: 35px;
+    color: #3f1263;
+    background-color:gold;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: fa-spin 2s infinite linear;
+    -webkit-animation: fa-spin 2s infinite linear;
+}
